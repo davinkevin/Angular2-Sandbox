@@ -1,24 +1,23 @@
 /**
  * Created by kevin on 12/03/2016.
  */
-import { Component }       from 'angular2/core';
-import {Type} from "angular2/core";
+import {Component, Type} from 'angular2/core';
 import {EmitterComponent} from "./emitter.component";
 
 @Component({
     selector: 'my-app',
     template: `
-        <h1>{{title}}</h1>
-        <emitter (emit)="log($event)"></emitter>
+        <h1>{{title}} {{ number }}</h1>
+        <emitter (emit)="attach($event)"></emitter>
     `,
-    directives : [ EmitterComponent ]
+    directives : [ <Type>EmitterComponent ]
 })
 export class AppComponent {
-    title = 'Tests on EventEmitter';
+    title = 'Tests on EventEmitter n°';
+    number = -1;
 
-    log($event) : void {
-        console.log("Event logged");
-        console.log($event);
+    attach(n : number) : void {
+        this.number = n;
     }
 }
 

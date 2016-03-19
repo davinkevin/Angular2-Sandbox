@@ -1,7 +1,7 @@
 /**
  * Created by kevin on 12/03/2016.
  */
-import {Component, Type} from 'angular2/core';
+import {Component} from "angular2/core";
 import {EmitterComponent} from "./emitter.component";
 
 @Component({
@@ -10,7 +10,7 @@ import {EmitterComponent} from "./emitter.component";
         <h1>{{title}} {{ number }}</h1>
         <emitter (emit)="attach($event)"></emitter>
     `,
-    directives : [ <Type>EmitterComponent ]
+    directives : [ EmitterComponent ]
 })
 export class AppComponent {
     title = 'Tests on EventEmitter n°';

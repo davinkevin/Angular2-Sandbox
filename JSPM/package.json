@@ -5,7 +5,8 @@
     "start": "lite-server",
     "lite": "lite-server",
     "typings": "typings",
-    "postinstall": "typings install && jspm install"
+    "postinstall": "typings install && jspm install",
+    "build" : "jspm bundle-sfx app/main.ts dist/bundle.js"
   },
   "license": "ISC",
   "dependencies": {},

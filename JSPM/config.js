@@ -2,15 +2,16 @@ System.config({
   baseURL: "/",
   defaultJSExtensions: true,
   transpiler: "typescript",
+  paths: {
+    "npm:*": "jspm_packages/npm/*",
+    "github:*": "jspm_packages/github/*"
+  },
+
   packages: {
     "app": {
       "main": "main",
       "defaultExtension": "ts"
     }
-  },
-  paths: {
-    "npm:*": "jspm_packages/npm/*",
-    "github:*": "jspm_packages/github/*"
   },
 
   map: {

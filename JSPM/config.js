@@ -17,6 +17,7 @@ System.config({
   map: {
     "angular2": "npm:angular2@2.0.0-beta.11",
     "reflect-metadata": "npm:reflect-metadata@0.1.3",
+    "text": "github:systemjs/plugin-text@0.0.7",
     "typescript": "npm:typescript@1.8.9",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
